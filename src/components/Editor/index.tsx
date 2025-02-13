@@ -8,6 +8,9 @@ import Table from "@tiptap/extension-table";
 import TableRow from "@tiptap/extension-table-row";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
+import TextStyle from '@tiptap/extension-text-style';
+import Color from '@tiptap/extension-color';
+import Highlight from '@tiptap/extension-highlight';
 import Toolbar from "./Toolbar";
 import AssetManager from "./AssetManager";
 import { useState } from "react";
@@ -28,6 +31,9 @@ export default function Editor() {
       TableRow,
       TableCell,
       TableHeader,
+      TextStyle,
+      Color,
+      Highlight.configure({ multicolor: true }),
     ],
     content: "<p>Edit this text, add images, links, and more!</p>",
     editorProps: {
